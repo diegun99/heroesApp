@@ -22,7 +22,8 @@ import { HeroesRoutingModule } from './heroes-routing.module';
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    
   ]
 })
 export class HeroesModule { }
