@@ -18,12 +18,14 @@ export class ListadoComponent implements OnInit {
   ){ }
   ngOnInit(): void {
     this.heroesService.getHeroes().subscribe(
-      (data)=>{
-        this.heroesLista = data
-      },
-      ()=>{},
-      ()=>{}
-
+      {
+        next: (data) => {
+            this.heroesLista = data;
+        },
+        error: (error) => {
+            alert('There was an error in retrieving data from the server');
+        }
+    }
     )
 
   }
